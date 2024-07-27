@@ -54,6 +54,7 @@ class GridViewItem extends StatelessWidget {
                       Text(
                         '$firstName $lastName',
                         style: const TextStyle(
+                          color: Colors.black,
                           fontWeight: FontWeight.w700,
                           fontSize: 18,
                         ),
