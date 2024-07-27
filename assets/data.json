@@ -4,9 +4,9 @@
       "id": 1,
       "firstName": "Emily",
       "lastName": "Johnson",
+      "gender": "Female",
       "age": 28,
-      "gender": "female",
-      "email": "emily.johnson@x.dummyjson.com",
+      "email": "emilyjohnson@x.com",
       "phone": "+81 965-431-3024",
       "image": "https://dummyjson.com/icon/emilys/128",
       "address": {
@@ -20,9 +20,9 @@
       "id": 2,
       "firstName": "Michael",
       "lastName": "Williams",
+      "gender": "Male",
       "age": 35,
-      "gender": "male",
-      "email": "michael.williams@x.dummyjson.com",
+      "email": "michaelwilliams@x.com",
       "phone": "+49 258-627-6644",
       "image": "https://dummyjson.com/icon/michaelw/128",
       "address": {
@@ -35,9 +35,9 @@
       "id": 3,
       "firstName": "Sophia",
       "lastName": "Brown",
+      "gender": "Female",
       "age": 42,
-      "gender": "female",
-      "email": "sophia.brown@x.dummyjson.com",
+      "email": "sophiabrown@x.com",
       "phone": "+81 210-652-2785",
       "image": "https://dummyjson.com/icon/sophiab/128",
       "address": {
@@ -51,9 +51,9 @@
       "id": 4,
       "firstName": "James",
       "lastName": "Davis",
+      "gender": "Male",
       "age": 45,
-      "gender": "male",
-      "email": "james.davis@x.dummyjson.com",
+      "email": "jamesdavis@x.com",
       "phone": "+49 614-958-9364",
       "image": "https://dummyjson.com/icon/jamesd/128",
       "address": {
@@ -67,9 +67,9 @@
       "id": 5,
       "firstName": "Emma",
       "lastName": "Miller",
+      "gender": "Female",
       "age": 30,
-      "gender": "female",
-      "email": "emma.miller@x.dummyjson.com",
+      "email": "emmamiller@x.com",
       "phone": "+91 759-776-1614",
       "image": "https://dummyjson.com/icon/emmaj/128",
       "address": {
@@ -83,9 +83,9 @@
       "id": 6,
       "firstName": "Olivia",
       "lastName": "Wilson",
+      "gender": "Female",
       "age": 22,
-      "gender": "female",
-      "email": "olivia.wilson@x.dummyjson.com",
+      "email": "oliviawilson@x.com",
       "phone": "+91 607-295-6448",
       "image": "https://dummyjson.com/icon/oliviaw/128",
       "address": {
@@ -99,9 +99,9 @@
       "id": 7,
       "firstName": "Alexander",
       "lastName": "Jones",
+      "gender": "Female",
       "age": 38,
-      "gender": "male",
-      "email": "alexander.jones@x.dummyjson.com",
+      "email": "alexanderjones@x.com",
       "phone": "+61 260-824-4986",
       "image": "https://dummyjson.com/icon/alexanderj/128",
       "address": {
@@ -112,7 +112,6 @@
       }
     }
   ],
-  "status": true,
-  "state": "success",
+  "success": true,
   "statusCode": 200
 }
