@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'package:read_data_from_json_file/models/user.dart';
-import 'package:read_data_from_json_file/views/home_view.dart';
 
 class ShowData extends StatefulWidget {
   final User? user;
-final Function deleteUSer;
-  const ShowData({required this.deleteUSer,required this.user, super.key});
+  final Function deleteUSer;
+  const ShowData({required this.deleteUSer, required this.user, super.key});
 
   @override
   State<ShowData> createState() => _ShowDataState();
@@ -33,7 +33,7 @@ class _ShowDataState extends State<ShowData> {
               subtitle: Text(widget.user?.email ?? ''),
               trailing: IconButton(
                   onPressed: () {
-                  widget.deleteUSer(widget.user);
+                    widget.deleteUSer(widget.user);
                     Navigator.of(context).pop(true);
                   },
                   icon: const Icon(

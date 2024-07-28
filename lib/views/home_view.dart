@@ -6,14 +6,6 @@ import 'package:read_data_from_json_file/models/user.dart';
 import 'package:read_data_from_json_file/views/show_data.dart';
 import 'package:read_data_from_json_file/widgets/grid_view_item.dart';
 
-class ValueNotifierList<T> extends ValueNotifier<List<T>> {
-  ValueNotifierList(super.value);
-  void remove(T valueToRemove) {
-    value = value.where((value) => value != valueToRemove).toList();
-    notifyListeners();}
-
-
-}
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
@@ -21,16 +13,14 @@ class HomeView extends StatefulWidget {
   State<HomeView> createState() => _HomeViewState();
 }
 
+var usersNotifier = ValueNotifier(0);
 
-var usersNotifier =ValueNotifier(0);
 class _HomeViewState extends State<HomeView> {
-  late ValueNotifierList<User> usersListNotifier;
   List<User> usersList = [];
   bool isLoading = false;
   String errorMessage = '';
   @override
   void initState() {
-    usersListNotifier = ValueNotifierList<User>([]);
     fetchUsers();
     super.initState();
   }
@@ -53,10 +43,12 @@ class _HomeViewState extends State<HomeView> {
       isLoading = false;
     });
   }
+
   void deleteUser(User user) {
-    usersListNotifier.remove(user);
+    usersList.remove(user);
     usersNotifier.value++;
   }
+
   @override
   void dispose() {
     usersNotifier.dispose();
@@ -81,7 +73,7 @@ class _HomeViewState extends State<HomeView> {
                 ? Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: ValueListenableBuilder(
-                        valueListenable: usersListNotifier,
+                        valueListenable: usersNotifier,
                         builder: (context, value, _) {
                           return GridView.count(
                             crossAxisCount: constraints.maxWidth > 1000
@@ -97,7 +89,7 @@ class _HomeViewState extends State<HomeView> {
                                             .push(MaterialPageRoute(
                                                 builder: (context) => ShowData(
                                                       user: e,
-                                                  deleteUSer: deleteUser,
+                                                      deleteUSer: deleteUser,
                                                     )));
                                       },
                                       phone: e.phone ?? '',

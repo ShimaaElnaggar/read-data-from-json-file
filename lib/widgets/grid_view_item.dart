@@ -12,18 +12,18 @@ class GridViewItem extends StatelessWidget {
   final Address? address;
   final void Function()? onTap;
 
-  const GridViewItem(
-      {required this.address,
-      required this.firstName,
-      required this.lastName,
-      required this.gender,
-      required this.age,
-      required this.email,
-      required this.image,
-      required this.phone,
-        required this.onTap,
-
-      super.key, });
+  const GridViewItem({
+    required this.address,
+    required this.firstName,
+    required this.lastName,
+    required this.gender,
+    required this.age,
+    required this.email,
+    required this.image,
+    required this.phone,
+    required this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +77,9 @@ class GridViewItem extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -90,7 +92,9 @@ class GridViewItem extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -98,7 +102,9 @@ class GridViewItem extends StatelessWidget {
                   buildContainer(address?.state?.toString() ?? 'Not Found'),
                 ],
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
