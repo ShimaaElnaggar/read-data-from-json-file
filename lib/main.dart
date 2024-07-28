@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      theme: ThemeData.light(),
+      //theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       title: 'Read From Json',
       home: const HomeView(),

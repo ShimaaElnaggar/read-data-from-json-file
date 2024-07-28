@@ -10,6 +10,7 @@ class GridViewItem extends StatelessWidget {
   final String phone;
   final String image;
   final Address? address;
+  final void Function()? onTap;
 
   const GridViewItem(
       {required this.address,
@@ -20,11 +21,14 @@ class GridViewItem extends StatelessWidget {
       required this.email,
       required this.image,
       required this.phone,
-      super.key});
+        required this.onTap,
+
+      super.key, });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: onTap,
       child: Card(
         color: Colors.white,
         surfaceTintColor: Colors.white,
